@@ -22,8 +22,12 @@ namespace inheritance
             //create an instance of VideoPost and use the ToString() method on it
 
             VideoPost videoPost1 = new VideoPost("Look what happened last week",
-                "Ivan Birch", "Https://underbox.co.za/lastweek", true);
+                "Ivan Birch", "Https://underbox.co.za/lastweek", true, 5);
             Console.WriteLine(videoPost1.ToString());
+            videoPost1.Play();
+            Console.WriteLine("press any key to top the video");
+            Console.ReadKey();
+            videoPost1.Stop();
             Console.ReadLine();
         }
     }
