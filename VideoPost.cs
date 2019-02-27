@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace inheritance
 {
-    // IMagePost derives from post and adds a property(ImageUrl) and two constructors
-    class ImagePost:post
+    class VideoPost:post
     {
-        public string ImageUrl { get; set; }
+        public string VideoUrl { get; set; }
 
-        //will be called implicitly
-        public ImagePost() { }
+        public VideoPost() { }
 
-        public ImagePost(string title, string sendByUsername, string imageURL, bool isPublic)
+        public VideoPost(string title, string sendByUsername, string videoURL, bool isPublic)
         {
             //The following properties and the GetNextID method are inherited from post
             this.ID = GetNextId();
@@ -22,14 +20,14 @@ namespace inheritance
             this.SendByUsername = sendByUsername;
             this.IsPublic = isPublic;
             //Property ImageURL is a member of ImagePost, but not of post
-            this.ImageUrl = imageURL;
+            this.VideoUrl = videoURL;
         }
 
         //Virtual method override of the ToString method that is Inherited from System.Object
         public override string ToString()
         {
-            return String.Format("{0} - {1} - {2} - by {3}", 
-                this.ID, this.Title, this.ImageUrl, this.SendByUsername);
+            return String.Format("{0} - {1} - {2} - by {3}",
+                this.ID, this.Title, this.VideoUrl, this.SendByUsername);
         }
     }
 }

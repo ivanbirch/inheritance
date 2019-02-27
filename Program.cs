@@ -15,6 +15,15 @@ namespace inheritance
             ImagePost imagePost1 = new ImagePost("Look what happened this morning",
                 "Ivan Birch", "Https://underbox.co.za/today", true);
             Console.WriteLine(imagePost1.ToString());
+            //Challenge - add a deriving class "VideoPost with properties VideoUrl and Length
+
+            //create the required constructors to create a VideoPost
+            //adjust the ToString() method accordingly
+            //create an instance of VideoPost and use the ToString() method on it
+
+            VideoPost videoPost1 = new VideoPost("Look what happened last week",
+                "Ivan Birch", "Https://underbox.co.za/lastweek", true);
+            Console.WriteLine(videoPost1.ToString());
             Console.ReadLine();
         }
     }
